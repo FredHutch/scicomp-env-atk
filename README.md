@@ -1,4 +1,4 @@
 # scicomp-env-atk
 
-TODO: Enter the cookbook description here.
+This is a cookbook for testing environment cookbook automation
 
