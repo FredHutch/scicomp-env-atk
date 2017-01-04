@@ -7,7 +7,6 @@ node('knife-wks') {
         stage 'Stage: Build'
         sh '''
           eval "$(chef shell-init sh)"
-          env
           rake noop
         '''
     }
