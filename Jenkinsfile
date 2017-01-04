@@ -1,10 +1,12 @@
 #!/usr/bin/env groovy
-def runme
 node('knife-wks') {
     dir( 'src' ){
+        stage 'Stage: Checkout'
         checkout scm
+        
+        stage 'Stage: Build'
         sh '''
-          eval "$(chef shell-init bash)"
+          eval "$(chef shell-init sh)"
           rake noop
         '''
     }
