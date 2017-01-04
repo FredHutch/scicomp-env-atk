@@ -1,0 +1,7 @@
+name 'scicomp-env-atk'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures scicomp-env-atk'
+long_description 'Installs/Configures scicomp-env-atk'
+version '0.1.0'
