@@ -1,5 +1,5 @@
 repository_name = `knife metadata name`
-repository_name = repository_name.chomp.split[1]
+#repository_name = repository_name.chomp.split[1]
 branch = ENV['BRANCH_NAME']
 
 task :noop do
