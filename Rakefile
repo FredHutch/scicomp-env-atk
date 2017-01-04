@@ -3,7 +3,7 @@ repository_name = repository_name.chomp.split[1]
 branch = ENV['BRANCH_NAME']
 
 task :noop do
-  puts "building branch #{branch}"
+  puts "building branch #{branch} in #{repository_name}"
   if branch == "prod"
     environment_name = "#{repository_name}"
   else
