@@ -3,6 +3,9 @@ def runme
 node('knife-wks') {
     dir( 'src' ){
         checkout scm
-        sh 'rake noop'
+        sh '''
+          eval "$(chef shell-init bash)"
+          rake noop
+        '''
     }
 }
