@@ -7,7 +7,7 @@ node('knife-wks') {
         stage 'Stage: Build'
         sh '''
           eval "$(chef shell-init sh)"
-          echo "branch to build is ${env.BRANCH_NAME}"
+          env
           rake noop
         '''
     }
