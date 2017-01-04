@@ -1,8 +1,16 @@
 repository_name = `knife metadata name`
 repository_name = repository_name.chomp.split[1]
+branch = ENV['BRANCH_NAME']
 
 task :noop do
-  puts "building branch #{ENV['BRANCH_NAME']}"
+  puts "building branch #{branch}"
+  if branch == "prod"
+    environment_name = "#{repository_name}"
+  else
+    environment_name = "#{repository_name}-#{branch}"
+  end
+  puts "applying branch to environment #{environment_name}"
+
 end
 
 task :apply do
