@@ -1,10 +1,6 @@
 ---
 driver:
-  name: docker
-    use_sudo: false
-    dns:
-      - 140.107.42.11
-      - 140.107.117.11
+  name: vagrant
 
 provisioner:
   name: chef_zero
