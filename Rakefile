@@ -18,11 +18,13 @@ task :noop do
   else
     environment_name = "#{repository_name}-#{branch}"
   end
-  if File.exists?"Berksfile.lock"
-    puts "updating berksfile"
-  else
-    puts "installing berksfile"
-  end
+
+  puts "updating berksfile"
+  sh %(berks update)
+
+  puts "installing berksfile"
+  sh %(berks install)
+
   puts "building environment file"
   environment_file = Tempfile.new([environment_name, '.json'])
   puts "writing to #{environment_file.path}"
