@@ -5,6 +5,8 @@ license 'all_rights'
 description 'An environment cookbook for testing automation'
 long_description 'An environment cookbook for testing automation'
 version '0.1.0'
+issues_url 'https://github.com/FredHutch/scicomp-env-atk/issues'
+source_url 'https://github.com/FredHutch/scicomp-env-atk'
 
 depends 'cit-roles', '= 0.0.25'
 depends 'scicomp-base', '= 1.0.11'
